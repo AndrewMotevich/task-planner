@@ -1,27 +1,50 @@
-# TaskPlanner
+Frontend Angular Developer Test
+Задание
+Разработать SPA приложение, в котором реализовать список задач на ближайшее время.
+Используемые средства: Angular 16, bootstrap 5
+Сроки выполнения: до 5 дней
+Описание
+1.	Приложение состоит из двух страниц:
+1.1.	“/login” – страница авторизации (username: admin, password: admin).
+Валидация на корректность введенных учетных данных при попытке войти (выводить сообщение на форме авторизации о вводе некорректных данных). 
+1.2.	“/” – Home страница, не доступна без авторизации (перебрасывать на страницу login)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+2.	Home страница включает:
+2.1.	Список задач:
+2.1.1.	 Возможность добавления задачи
+2.1.2.	 Возможность удаления задачи
+2.1.3.	 Возможность отметить задачу как выполненную
+2.1.4.	 Опциональная возможность задать дату выполнения задачи (Datepicker). Нельзя задать дату выполнения на «вчерашний день»)
+2.1.5.	 Отсортирован в порядке: сверху просроченные, затем не выполненные, в самом низу выполненные задачи
+2.1.6.	 Синхронизация с хранилищем (после перезагрузки страницы данные списка не должны пропадать)
+2.2.	Панель фильтров.
+Имеется 2 типа фильтров: «просроченные», «выполненные». 
+Фильтр включается при зажатии соответствующего тега, отключается путем отжатия тега. 
+По умолчанию оба фильтра выключены (т.е. отображается весь список).
 
-## Development server
+В Desktop версии панель находится слева страницы, растянута на всю высоту страницы, имеет 2 состояния: свернутое и раскрытое. В свернутом состоянии панели фильтр представлен иконкой. В развернутом состоянии панели фильтр представлен в виде иконки и соответствующей подписи справа. 
+Сворачивание и разворачивание панели должно сопровождаться анимацией «выезжания». 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+В мобильной версии панель зафиксирована внизу страницы, фильтры представлены в виде иконок.
 
-## Code scaffolding
+Ориентировочные макеты см. ниже.
+2.3.	Шапка «Список задач» - закреплена вверху страницы. Шпака никогда не скроллируется. 
+2.4.	Фон страницы – любое изображение.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+3.	Покрыть unit-тестами список (фильтрация, сортировка), компоненты, роутинг.
+Требования
+1.	Адаптивная верстка
+2.	Кросс-браузерность (Chrome 115+, Firefox 116+)
+3.	Поддержка mobile устройств (iOS 14+, Android 10+)
+4.	Шрифт приложения: Museo Cyrl
+5.	Дизайн на усмотрение разработчика
+6.	Будет плюсом, если напишете Dockerfile  для запуска приложения
+Результат
+Результат необходимо отправить на адрес tamara@siberteam.com архивом, либо выложить на github и прислать ссылку на проект.
+Ориентировочные макеты
+ 
+Рис.1. Мобильная версия
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Рис.2. Раскрытая панель фильтров в десктопной версии
+ 
+Рис.3. Свернутая панель фильтров в десктопной версии
