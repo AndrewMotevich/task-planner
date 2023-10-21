@@ -1,5 +1,11 @@
 :host {
   width: 100%;
   height: 100%;
-  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('../assets/images/auth-background.png');
+  background-repeat: repeat;
+  background-size: contain;
+  background-position: center;
 }

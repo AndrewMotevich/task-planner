@@ -1,17 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { BASE } from '../shared/constants/routing-paths.consts';
-import { PlannerPageComponent } from './pages/planner-page/planner-page.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 const routes: Routes = [
-  {
-    path: BASE.path,
-    component: PlannerPageComponent,
-  },
+  {path: BASE.path, component: LoginPageComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class PlannerRoutingModule {}
+export class AuthRoutingModule { }

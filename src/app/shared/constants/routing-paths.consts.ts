@@ -10,6 +10,11 @@ export const ABOUT: IRoutingPath = {
   fullPath: '/about',
 };
 
+export const BASE: IRoutingPath = {
+  path: '',
+  fullPath: '',
+};
+
 export const HOME: IRoutingPath = {
   path: '',
   fullPath: '',
