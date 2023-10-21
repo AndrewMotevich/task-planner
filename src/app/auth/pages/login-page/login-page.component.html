@@ -1,1 +1,6 @@
-<p>login-page works!</p>
+<form [formGroup]="loginForm">
+  <app-text-input label="Почта" placeholder="Введите адрес почты" formControlName="email"></app-text-input>
+  <app-password-input label="Пароль" placeholder="Введите свой пароль" formControlName="password"></app-password-input>
+  <button type="button" class="btn btn-secondary" (click)="submit()">Войти</button>
+</form>
+

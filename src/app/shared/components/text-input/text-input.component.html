@@ -1,1 +1,13 @@
-<p>text-input works!</p>
+<div class="flex-layout needs-validation">
+  <label htmlFor="inputText">{{label}}</label>
+  <input
+    id="inputText"
+    type="text"
+    class="form-control"
+    [ngClass]="{'was-validated is-invalid' : (control.dirty && control.invalid)}"
+    [placeholder]="placeholder || ''"
+    [formControl]="control">
+  <ng-template [ngIf]="control.errors && control.dirty">
+    <small class="error">{{control.errors | getErrorMessage: label : maxlength : minlength}}</small>
+  </ng-template>
+</div>

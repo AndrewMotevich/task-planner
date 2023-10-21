@@ -21,6 +21,10 @@ html, body {
   color: #ffffff;
 }
 
+.error {
+  color: var(--bs-form-invalid-color);
+}
+
 h1,
 h2,
 h3,
