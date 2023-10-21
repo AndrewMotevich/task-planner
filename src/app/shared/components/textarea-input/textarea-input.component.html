@@ -1,1 +1,17 @@
-<p>textarea-input works!</p>
+<div class="flex-layout needs-validation">
+  <label htmlFor="inputTextarea">{{label}}</label>
+  <textarea
+    id="inputTextarea"
+    type="text"
+    class="form-control"
+    [rows]="rows"
+    [cols]="cols"
+    [ngClass]="{'was-validated is-invalid' : (control.dirty && control.invalid)}"
+    [placeholder]="placeholder || ''"
+    [formControl]="control"></textarea>
+  <ng-template [ngIf]="control.errors && control.dirty">
+    <small class="error">
+      {{control.errors | getErrorMessage: label : maxlength : minlength}}
+    </small>
+  </ng-template>
+</div>

@@ -1,1 +1,18 @@
-<p>date-input works!</p>
+<div class="flex-layout needs-validation">
+  <label htmlFor="inputDate">{{label}}</label>
+  <div class="input-group">
+    <input
+      id="inputDate"
+      class="form-control"
+      placeholder="yyyy-mm-dd"
+      name="dp"
+      [formControl]="control"
+      ngbDatepicker
+      #d="ngbDatepicker"
+    />
+    <button class="btn btn-outline-secondary bi bi-calendar3" (click)="d.toggle()" type="button"></button>
+  </div>
+  <ng-template [ngIf]="control.errors && control.dirty">
+    <small class="error">{{control.errors | getErrorMessage: label : maxlength : minlength}}</small>
+  </ng-template>
+</div>

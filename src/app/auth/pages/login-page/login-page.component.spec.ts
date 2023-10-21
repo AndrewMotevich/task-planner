@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { LoginPageComponent } from './login-page.component';
+import { AuthModule } from '../../auth.module';
 
 describe('LoginPageComponent', () => {
   let component: LoginPageComponent;
@@ -8,7 +9,7 @@ describe('LoginPageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LoginPageComponent ]
+      ...new AuthModule()
     })
     .compileComponents();
 
@@ -17,7 +18,7 @@ describe('LoginPageComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create Login page', () => {
     expect(component).toBeTruthy();
   });
 });

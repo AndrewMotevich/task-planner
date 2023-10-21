@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import {
   ChangeDetectionStrategy,
   ChangeDetectorRef,
@@ -6,17 +7,22 @@ import {
   Optional,
   Self,
 } from '@angular/core';
-import { GetErrorMessagePipe } from '../../pipes/get-error-message.pipe';
 import { NgControl, ReactiveFormsModule } from '@angular/forms';
-import { CommonModule } from '@angular/common';
+import { NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
 import { BaseInputClass } from '../../classes/base-input.class';
+import { GetErrorMessagePipe } from '../../pipes/get-error-message.pipe';
 
 @Component({
   selector: 'app-date-input',
   templateUrl: './date-input.component.html',
   styleUrls: ['./date-input.component.scss'],
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, GetErrorMessagePipe],
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    GetErrorMessagePipe,
+    NgbDatepickerModule,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DateInputComponent extends BaseInputClass {
