@@ -8,6 +8,12 @@
   src: url("./assets/fonts/MuseoCyrl500.otf");
 }
 
+$breakpoints: (
+  "small": 560px,
+  "medium": 980px,
+  "large": 1200px,
+) !default;
+
 * {
   font-family: MuseoCyrl, Times, serif;
   box-sizing: border-box;

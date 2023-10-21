@@ -1,1 +1,9 @@
-<p>side-bar works!</p>
+<aside [@openClose]="isSidebarOpen ? 'open' : 'closed'">
+  <div class="aside-header">
+    <button (click)="toggleSidebar()">>></button>
+    <hr>
+  </div>
+
+  <button>Просроченные</button>
+  <button>Выполненные</button>
+</aside>

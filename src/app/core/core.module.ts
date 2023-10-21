@@ -5,13 +5,15 @@ import { CoreRoutingModule } from './core-routing.module';
 import { CorePageComponent } from './pages/core-page/core-page.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { MobileFooterBarComponent } from './components/mobile-footer-bar/mobile-footer-bar.component';
 
 
 @NgModule({
   declarations: [
     CorePageComponent,
     HeaderComponent,
-    SideBarComponent
+    SideBarComponent,
+    MobileFooterBarComponent
   ],
   imports: [
     CommonModule,

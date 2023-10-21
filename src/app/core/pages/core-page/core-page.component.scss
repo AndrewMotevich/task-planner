@@ -1,0 +1,51 @@
+@import '../../../../styles.scss';
+
+:host {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  display: flex;
+}
+.application-wrapper{
+  width: 100%;
+  height: 100%;
+}
+
+.mobile-footer-bar{
+  display: none;
+}
+
+.main-wrapper{
+  width: 100%;
+  height: calc(100% - 5rem);
+  overflow: auto;
+}
+
+@media (max-width: map-get($breakpoints, "small")) {
+  .main-wrapper{
+    height: calc(100% - 10rem);
+  }
+  .mobile-footer-bar{
+    display: block;
+  }
+  .side-bar{
+    display: none;
+  }
+}
+
+//custom scrollbar
+.my-scrollbar::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.my-scrollbar::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: transparent;
+}
+
+.my-scrollbar::-webkit-scrollbar-thumb {
+  border-radius: 0.5rem;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #b19df7;
+}
