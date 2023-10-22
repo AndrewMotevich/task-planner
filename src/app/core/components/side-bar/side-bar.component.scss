@@ -1,7 +1,7 @@
 :host {
   display: block;
   height: 100%;
-  background-color: blue;
+  background-color: #070917bc;
 }
 aside {
   width: 18rem;
@@ -10,5 +10,21 @@ aside {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+}
+.aside-header {
+  padding-left: 1rem;
+  margin-top: 1rem;
+}
+.aside-content {
+  width: 100%;
+  padding: 0 1.5rem 0 1rem;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.btn{
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem
 }

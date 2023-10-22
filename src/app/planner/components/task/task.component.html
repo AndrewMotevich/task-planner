@@ -1,0 +1,17 @@
+<div class="form-check">
+  <input
+    class="form-check-input"
+    type="checkbox"
+    [formControl]="checked"
+    id="flexCheckDefault">
+</div>
+
+<div>
+  <label
+    class="form-check-label"
+    for="flexCheckDefault">
+    {{task.title}}
+  </label>
+  <p *ngIf="task.date">Дата выполнения: {{taskDate | date: "dd.mm.yy"}}</p>
+  <p *ngIf="task.description">{{task.description}}</p>
+</div>

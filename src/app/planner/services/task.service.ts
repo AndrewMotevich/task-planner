@@ -4,13 +4,14 @@ import { sortByOverdue } from '../helpers/sort-by-overdue.helper';
 import { ITask } from '../interfaces/task.interface';
 import { mockTasks } from './mock/mock-tasks.mock';
 import { sortByCompleted } from '../helpers/sort-by-completed.helper';
+import { sortByUncompleted } from '../helpers/sort-by-uncompleted.helper';
 
 @Injectable({
   providedIn: 'root',
 })
 export class TaskService {
-  private tasks: ITask[] = [];
-  private tasksObservableSubject = new BehaviorSubject<ITask[]>(mockTasks);
+  private tasks: ITask[] = mockTasks;
+  private tasksObservableSubject = new BehaviorSubject<ITask[]>(this.tasks);
 
   public get tasks$(): Observable<ITask[]> {
     return this.tasksObservableSubject.asObservable();
@@ -22,6 +23,12 @@ export class TaskService {
       .pipe(map((tasks) => sortByOverdue(tasks)));
   }
 
+  public get uncompletedTasks$(): Observable<ITask[]> {
+    return this.tasksObservableSubject
+      .asObservable()
+      .pipe(map((tasks) => sortByUncompleted(tasks)));
+  }
+
   public get completedTasks$(): Observable<ITask[]> {
     return this.tasksObservableSubject
       .asObservable()
@@ -30,7 +37,7 @@ export class TaskService {
 
   constructor() {
     const storedTasks = localStorage.getItem('tasks');
-    this.tasks = storedTasks ? JSON.parse(storedTasks) : [];
+    this.tasks = storedTasks ? JSON.parse(storedTasks) : this.tasks;
     this.tasksObservableSubject.next(this.tasks);
   }
 
@@ -55,6 +62,8 @@ export class TaskService {
     this.tasks[taskIndex] = { ...updatedTask };
     this.tasksObservableSubject.next(this.tasks);
     this.saveToLocalStorage();
+
+    console.log(this.tasks)
   }
 
   private saveToLocalStorage(): void {

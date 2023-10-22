@@ -25,6 +25,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 })
 export class SideBarComponent {
   public isSidebarOpen = true;
+  public overdueTasks = false;
+  public completedTasks = false;
 
   public toggleSidebar(): void {
     this.isSidebarOpen = !this.isSidebarOpen;

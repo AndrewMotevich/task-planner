@@ -4,12 +4,11 @@ export function sortByOverdue(tasks: ITask[]): ITask[] {
   return tasks.filter((task) => {
     if(!task.date) return false;
 
-    const currentDateIsoString = new Date().toISOString();
-    const taskDateIsoString = new Date(task.date).toISOString();
-
-    if (taskDateIsoString < currentDateIsoString) {
+    const currentDate = Date.now();
+    if (task.date < currentDate) {
       return true;
     }
+
     return false;
   });
 }

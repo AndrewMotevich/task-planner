@@ -7,4 +7,12 @@
 }
 .header-wrapper {
   height: 5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+
+  h1{
+    margin-top: 0;
+    margin-left: 1rem;
+  }
 }

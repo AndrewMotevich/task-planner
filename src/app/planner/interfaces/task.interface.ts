@@ -3,5 +3,5 @@ export interface ITask {
   title: string;
   checked: boolean;
   description?: string;
-  date?: Date | string;
+  date?: number;
 }

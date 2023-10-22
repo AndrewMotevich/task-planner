@@ -1,1 +1,3 @@
-<p>task-list works!</p>
+<ng-container *ngFor="let task of (tasks$ | async)">
+  <app-task [task]="task"></app-task>
+</ng-container>

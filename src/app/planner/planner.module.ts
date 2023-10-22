@@ -6,6 +6,8 @@ import { PlannerPageComponent } from './pages/planner-page/planner-page.componen
 import { TaskFormComponent } from './components/task-form/task-form.component';
 import { TaskListComponent } from './components/task-list/task-list.component';
 import { SortingPipe } from './pipes/sorting.pipe';
+import { TaskComponent } from './components/task/task.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -13,11 +15,13 @@ import { SortingPipe } from './pipes/sorting.pipe';
     PlannerPageComponent,
     TaskFormComponent,
     TaskListComponent,
-    SortingPipe
+    SortingPipe,
+    TaskComponent
   ],
   imports: [
     CommonModule,
-    PlannerRoutingModule
+    PlannerRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class PlannerModule { }

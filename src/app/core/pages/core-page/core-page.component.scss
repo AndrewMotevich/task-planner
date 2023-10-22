@@ -19,6 +19,7 @@
   width: 100%;
   height: calc(100% - 5rem);
   overflow: auto;
+  padding: 0 1rem 1rem 1rem;
 }
 
 @media (max-width: map-get($breakpoints, "small")) {
