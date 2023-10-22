@@ -1,11 +1,10 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { SideBarComponent } from '../side-bar/side-bar.component';
 
 @Component({
   selector: 'app-mobile-footer-bar',
   templateUrl: './mobile-footer-bar.component.html',
   styleUrls: ['./mobile-footer-bar.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MobileFooterBarComponent {
-
-}
+export class MobileFooterBarComponent extends SideBarComponent {}

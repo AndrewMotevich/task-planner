@@ -17,7 +17,7 @@ export class GetErrorMessagePipe implements PipeTransform {
       email: 'Не верно указана почта!',
       minlength: `Минимальная длина ${minlength}!`,
       maxlength: `Максимальная длина ${maxlength}!`,
-      pastdate: `Нельзя задать прошедшую дату!`
+      dateError: `Нельзя задать прошедшую дату!`
     };
 
     const errorKey = Object.keys(errors)[0];

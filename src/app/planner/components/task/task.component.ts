@@ -39,4 +39,8 @@ export class TaskComponent implements OnInit, OnDestroy {
     this.unsubscribe$.next(true);
     this.unsubscribe$.complete();
   }
+
+  public deleteTask(): void {
+    this.taskService.deleteTask(this.task.id);
+  }
 }

@@ -1,5 +1,6 @@
 :host {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1rem auto 3rem;
   align-items: center;
   gap: 1rem;
   background-color:  #0709178d;

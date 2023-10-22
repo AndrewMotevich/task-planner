@@ -8,6 +8,9 @@ import { TaskListComponent } from './components/task-list/task-list.component';
 import { SortingPipe } from './pipes/sorting.pipe';
 import { TaskComponent } from './components/task/task.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TextInputComponent } from '../shared/components/text-input/text-input.component';
+import { TextareaInputComponent } from '../shared/components/textarea-input/textarea-input.component';
+import { DateInputComponent } from '../shared/components/date-input/date-input.component';
 
 
 @NgModule({
@@ -21,7 +24,10 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     CommonModule,
     PlannerRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    TextInputComponent,
+    TextareaInputComponent,
+    DateInputComponent
   ]
 })
 export class PlannerModule { }

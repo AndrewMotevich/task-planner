@@ -1,1 +1,32 @@
-<p>task-form works!</p>
+<div class="modal-header">
+  <h4 class="modal-title">Новая задача!</h4>
+  <button
+    type="button"
+    class="btn-close"
+    aria-label="Close"
+    (click)="activeModal.dismiss('Cross click')"></button>
+</div>
+
+<form [formGroup]="taskForm" class="modal-body">
+  <app-text-input
+    label="Заголовок:"
+    placeholder="Введите название события"
+    formControlName="title"></app-text-input>
+  <app-date-input
+    label="Дэдлайн:"
+    placeholder="Введите крайную дату"
+    formControlName="date"></app-date-input>
+  <app-textarea-input
+    label="Описание:"
+    placeholder="Введите описание"
+    formControlName="description"></app-textarea-input>
+</form>
+
+<div class="modal-footer">
+  <button
+    type="button"
+    class="btn btn-outline-dark"
+    (click)="addTask()">
+    Добавить
+  </button>
+</div>

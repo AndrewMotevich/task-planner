@@ -62,8 +62,6 @@ export class TaskService {
     this.tasks[taskIndex] = { ...updatedTask };
     this.tasksObservableSubject.next(this.tasks);
     this.saveToLocalStorage();
-
-    console.log(this.tasks)
   }
 
   private saveToLocalStorage(): void {
