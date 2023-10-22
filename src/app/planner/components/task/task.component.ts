@@ -5,11 +5,10 @@ import {
   OnDestroy,
   OnInit,
 } from '@angular/core';
-import { ITask } from '../../interfaces/task.interface';
-import { mockTasks } from '../../services/mock/mock-tasks.mock';
-import { TaskService } from '../../services/task.service';
 import { FormControl } from '@angular/forms';
-import { Subject, of, takeUntil, tap } from 'rxjs';
+import { Subject, takeUntil } from 'rxjs';
+import { ITask } from '../../interfaces/task.interface';
+import { TaskService } from '../../services/task.service';
 
 @Component({
   selector: 'app-task',
@@ -22,7 +21,7 @@ export class TaskComponent implements OnInit, OnDestroy {
   public taskDate: Date | '';
   public checked = new FormControl<boolean>(false);
 
-  private unsubscribe = new Subject<boolean>();
+  private unsubscribe$ = new Subject<boolean>();
 
   constructor(private taskService: TaskService) {}
 
@@ -30,14 +29,14 @@ export class TaskComponent implements OnInit, OnDestroy {
     this.taskDate = this.task.date ? new Date(this.task.date) : '';
     this.checked.setValue(this.task.checked);
     this.checked.valueChanges
-      .pipe(takeUntil(this.unsubscribe))
+      .pipe(takeUntil(this.unsubscribe$))
       .subscribe((value) => {
         this.taskService.editTask({ ...this.task, checked: value });
       });
   }
 
   public ngOnDestroy(): void {
-    this.unsubscribe.next(true);
-    this.unsubscribe.complete();
+    this.unsubscribe$.next(true);
+    this.unsubscribe$.complete();
   }
 }

@@ -1,5 +1,15 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
+import {
+  FilterOptions,
+  FilterService,
+} from '../../../shared/services/filter.service';
 
 @Component({
   selector: 'app-side-bar',
@@ -21,12 +31,35 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
         })
       ),
       transition('open <=> closed', [animate('1s')]),
-    ])],
+    ]),
+  ],
 })
 export class SideBarComponent {
   public isSidebarOpen = true;
-  public overdueTasks = false;
-  public completedTasks = false;
+  public isOverdueTasks = false;
+  public isCompletedTasks = false;
+
+  constructor(private filterService: FilterService) {}
+
+  public toggleOverdueTasks(): void {
+    this.isOverdueTasks = !this.isOverdueTasks;
+
+    if (this.isOverdueTasks) {
+      this.filterService.setFilter(FilterOptions.overdue);
+    } else {
+      this.filterService.unsetFilter(FilterOptions.overdue);
+    }
+  }
+
+  public toggleCompletedTasks() {
+    this.isCompletedTasks = !this.isCompletedTasks;
+
+    if (this.isCompletedTasks) {
+      this.filterService.setFilter(FilterOptions.completed);
+    } else {
+      this.filterService.unsetFilter(FilterOptions.completed);
+    }
+  }
 
   public toggleSidebar(): void {
     this.isSidebarOpen = !this.isSidebarOpen;

@@ -5,7 +5,7 @@ export function sortByOverdue(tasks: ITask[]): ITask[] {
     if(!task.date) return false;
 
     const currentDate = Date.now();
-    if (task.date < currentDate) {
+    if (task.date < currentDate && !task.checked) {
       return true;
     }
 

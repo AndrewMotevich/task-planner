@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
 
-enum FilterOptions {
+export enum FilterOptions {
   default,
   completed,
   overdue,
@@ -10,21 +10,21 @@ enum FilterOptions {
 
 @Injectable({ providedIn: 'root' })
 export class FilterService {
-  private filterOption = FilterOptions.default
+  private filterOption = FilterOptions.default;
   private filterObservableSubject = new BehaviorSubject<FilterOptions>(
-    FilterOptions.default
+    this.filterOption
   );
 
   public get filter$(): Observable<FilterOptions> {
     return this.filterObservableSubject.asObservable();
   }
 
-  public setFilter(filter: FilterOptions){
+  public setFilter(filter: FilterOptions) {
     this.filterOption += filter;
     this.filterObservableSubject.next(this.filterOption);
   }
 
-  public unsetFilter(filter: FilterOptions){
+  public unsetFilter(filter: FilterOptions) {
     this.filterOption -= filter;
     this.filterObservableSubject.next(this.filterOption);
   }

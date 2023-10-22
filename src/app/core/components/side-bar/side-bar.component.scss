@@ -26,5 +26,8 @@ aside {
 .btn{
   display: flex;
   justify-content: flex-start;
-  gap: 1rem
+  gap: 1rem;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

@@ -12,6 +12,6 @@
     for="flexCheckDefault">
     {{task.title}}
   </label>
-  <p *ngIf="task.date">Дата выполнения: {{taskDate | date: "dd.mm.yy"}}</p>
+  <p *ngIf="task.date"><span class="error">Дэдлайн:</span> {{taskDate | date: "dd.MM.YY"}}</p>
   <p *ngIf="task.description">{{task.description}}</p>
 </div>
