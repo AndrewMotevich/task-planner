@@ -9,7 +9,7 @@ import {
 } from './shared/constants/routing-paths.consts';
 import { AboutComponent } from './shared/pages/about/about.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: LOGIN.path,
     loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
