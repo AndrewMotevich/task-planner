@@ -9,7 +9,9 @@ Frontend Angular Developer Test
    npm install
    npm run start
    ```
-   
+
+### [DEPLOYMENT](https://andrewmotevich.github.io/task-planner/login)
+
 ### Задание
 Разработать SPA приложение, в котором реализовать список задач на ближайшее время.
 Используемые средства: Angular 16, bootstrap 5
