@@ -17,7 +17,11 @@ describe('HeaderComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create HeaderComponent', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should have title', () => {
+    expect(fixture.nativeElement.innerText).toContain("Список задач");
   });
 });

@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from "@angular/core/testing";
 import { DateInputComponent } from "./date-input.component";
-import { ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { Component } from "@angular/core";
 
 @Component({
-  selector: 'cv-gen-mock-parent',
+  selector: 'app-mock-parent',
   template: `
     <app-date-input
       [placeholder]="placeholder"
       [label]="label"
       [(ngModel)]="modelValue"
-    ></-date-input>
+    ></app-date-input>
   `,
 })
 class MockParentComponent {
@@ -19,14 +19,14 @@ class MockParentComponent {
   modelValue = '';
 }
 
-xdescribe('DateInputComponent', () => {
+describe('DateInputComponent', () => {
   let fixture: ComponentFixture<MockParentComponent>;
   let parentComponent: MockParentComponent;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [MockParentComponent],
-      imports: [ReactiveFormsModule, DateInputComponent],
+      imports: [FormsModule, ReactiveFormsModule, DateInputComponent],
     });
 
     fixture = TestBed.createComponent(MockParentComponent);

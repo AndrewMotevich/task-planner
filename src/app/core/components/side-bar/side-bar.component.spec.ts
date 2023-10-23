@@ -1,6 +1,9 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { SideBarComponent } from './side-bar.component';
+import { CoreModule } from '../../core.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FilterService } from 'src/app/shared/services/filter.service';
 
 describe('SideBarComponent', () => {
   let component: SideBarComponent;
@@ -8,7 +11,9 @@ describe('SideBarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ SideBarComponent ]
+      imports: [BrowserAnimationsModule],
+      ...new CoreModule(),
+      providers: [FilterService]
     })
     .compileComponents();
 
@@ -17,7 +22,7 @@ describe('SideBarComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('should create SideBarComponent', () => {
     expect(component).toBeTruthy();
   });
 });

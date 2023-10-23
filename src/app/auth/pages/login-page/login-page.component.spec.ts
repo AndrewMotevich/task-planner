@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { LoginPageComponent } from './login-page.component';
 import { AuthModule } from '../../auth.module';
@@ -18,7 +18,18 @@ describe('LoginPageComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create Login page', () => {
+  it('should create LoginPage', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should show error tips', waitForAsync(() => {
+    const button = fixture.nativeElement.querySelector("button");
+    button.click();
+
+    fixture.detectChanges()
+    fixture.whenStable().then(() => {
+      const errorTip = fixture.nativeElement.querySelector('small')
+      expect(errorTip.innerText.trim()).toBe("Поле Почта обязательно!")
+    })
+  }));
 });
