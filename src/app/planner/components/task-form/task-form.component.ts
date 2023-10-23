@@ -41,10 +41,14 @@ export class TaskFormComponent {
       markAllAsDirty(this.taskForm.controls);
       return;
     }
+    const parsedDate = new Date(
+      this.dateParser.format(this.taskForm.controls['date'].getRawValue())
+    );
 
     this.taskService.addTask({
       ...this.taskForm.getRawValue(),
       id: Date.now(),
+      date: Number(parsedDate),
       checked: false,
     });
     this.activeModal.close();

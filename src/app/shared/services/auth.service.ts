@@ -3,7 +3,7 @@ import { BehaviorSubject, Observable } from "rxjs";
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private logInObservable = new BehaviorSubject<boolean>(true);
+  private logInObservable = new BehaviorSubject<boolean>(false);
 
   public get isLogin$(): Observable<boolean> {
     return this.logInObservable.asObservable();
