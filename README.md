@@ -10,7 +10,7 @@ Frontend Angular Developer Test
    npm run start
    ```
 
-### [DEPLOYMENT](https://andrewmotevich.github.io/task-planner/login)
+### [DEPLOYMENT](https://andrewmotevich.github.io/task-planner/)
 
 ### Задание
 Разработать SPA приложение, в котором реализовать список задач на ближайшее время.
