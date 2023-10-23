@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, map } from 'rxjs';
-import { sortByOverdue } from '../helpers/sort-by-overdue.helper';
-import { ITask } from '../interfaces/task.interface';
+import { sortByCompleted } from '../../planner/helpers/sort-by-completed.helper';
+import { sortByOverdue } from '../../planner/helpers/sort-by-overdue.helper';
+import { sortByUncompleted } from '../../planner/helpers/sort-by-uncompleted.helper';
+import { ITask } from '../../planner/interfaces/task.interface';
 import { mockTasks } from './mock/mock-tasks.mock';
-import { sortByCompleted } from '../helpers/sort-by-completed.helper';
-import { sortByUncompleted } from '../helpers/sort-by-uncompleted.helper';
 
 @Injectable({
   providedIn: 'root',

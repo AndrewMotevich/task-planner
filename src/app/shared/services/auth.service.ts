@@ -1,15 +1,15 @@
-import { Injectable } from "@angular/core";
-import { BehaviorSubject, Observable } from "rxjs";
+import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({ providedIn: 'root' })
 export class AuthService {
-  private logInObservable = new BehaviorSubject<boolean>(false);
+  private loginObservable = new BehaviorSubject<boolean>(false);
 
   public get isLogin$(): Observable<boolean> {
-    return this.logInObservable.asObservable();
+    return this.loginObservable.asObservable();
   }
 
   public setIsLogin(value: boolean): void {
-    this.logInObservable.next(value);
+    this.loginObservable.next(value);
   }
 }

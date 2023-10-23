@@ -8,7 +8,7 @@ import {
 import { FormControl } from '@angular/forms';
 import { Subject, takeUntil } from 'rxjs';
 import { ITask } from '../../interfaces/task.interface';
-import { TaskService } from '../../services/task.service';
+import { TaskService } from '../../../shared/services/task.service';
 
 @Component({
   selector: 'app-task',

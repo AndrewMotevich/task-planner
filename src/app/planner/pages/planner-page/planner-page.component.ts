@@ -4,8 +4,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'app-planner-page',
   templateUrl: './planner-page.component.html',
   styleUrls: ['./planner-page.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PlannerPageComponent {
-
-}
+export class PlannerPageComponent {}

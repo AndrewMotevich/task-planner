@@ -4,8 +4,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   selector: 'app-core-page',
   templateUrl: './core-page.component.html',
   styleUrls: ['./core-page.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CorePageComponent {
-
-}
+export class CorePageComponent {}

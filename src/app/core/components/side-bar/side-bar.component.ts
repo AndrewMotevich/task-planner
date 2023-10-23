@@ -6,10 +6,8 @@ import {
   trigger,
 } from '@angular/animations';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import {
-  FilterOptions,
-  FilterService,
-} from '../../../shared/services/filter.service';
+import { FilterService } from '../../../shared/services/filter.service';
+import { FilterOptions } from 'src/app/shared/enums/filter-options.enum';
 
 @Component({
   selector: 'app-side-bar',

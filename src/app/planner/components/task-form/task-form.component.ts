@@ -8,10 +8,9 @@ import {
   ValidatorFn,
   Validators,
 } from '@angular/forms';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbActiveModal, NgbDateParserFormatter } from '@ng-bootstrap/ng-bootstrap';
 import { markAllAsDirty } from 'src/app/shared/helpers/mark-as-dirty.util';
-import { NgbDateParserFormatter } from '@ng-bootstrap/ng-bootstrap';
-import { TaskService } from '../../services/task.service';
+import { TaskService } from '../../../shared/services/task.service';
 
 @Component({
   selector: 'app-task-form',

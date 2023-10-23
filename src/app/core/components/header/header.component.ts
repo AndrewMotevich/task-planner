@@ -9,11 +9,10 @@ import { TaskFormComponent } from 'src/app/planner/components/task-form/task-for
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
-
   constructor(private modalService: NgbModal) {}
 
-	public open() {
-		const modalRef = this.modalService.open(TaskFormComponent);
-		modalRef.componentInstance.name = 'World';
-	}
+  public open() {
+    const modalRef = this.modalService.open(TaskFormComponent);
+    modalRef.componentInstance.name = 'World';
+  }
 }

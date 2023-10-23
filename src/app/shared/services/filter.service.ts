@@ -1,12 +1,6 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-
-export enum FilterOptions {
-  default,
-  completed,
-  overdue,
-  both,
-}
+import { FilterOptions } from '../enums/filter-options.enum';
 
 @Injectable({ providedIn: 'root' })
 export class FilterService {

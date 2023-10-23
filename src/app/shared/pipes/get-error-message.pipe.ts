@@ -12,12 +12,13 @@ export class GetErrorMessagePipe implements PipeTransform {
     maxlength?: number,
     minlength?: number
   ): string {
+
     const errorMessages: { [key: string]: string } = {
       required: `Поле ${label || ''} обязательно!`,
       email: 'Не верно указана почта!',
       minlength: `Минимальная длина ${minlength}!`,
       maxlength: `Максимальная длина ${maxlength}!`,
-      dateError: `Нельзя задать прошедшую дату!`
+      dateError: `Нельзя задать прошедшую дату!`,
     };
 
     const errorKey = Object.keys(errors)[0];
