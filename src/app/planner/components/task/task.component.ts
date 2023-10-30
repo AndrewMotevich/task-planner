@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Subject, takeUntil } from 'rxjs';
-import { ITask } from '../../interfaces/task.interface';
+import { ITask } from '../../../shared/interfaces/task.interface';
 import { TaskService } from '../../../shared/services/task.service';
 
 @Component({

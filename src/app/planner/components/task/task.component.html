@@ -6,14 +6,14 @@
     id="flexCheckDefault">
 </div>
 
-<div>
+<div class="task-content">
   <label
     class="form-check-label"
     for="flexCheckDefault">
     {{task.title}}
   </label>
   <p *ngIf="task.date"><span class="error">Дэдлайн:</span> {{taskDate | date: "dd.MM.YY"}}</p>
-  <p *ngIf="task.description">{{task.description}}</p>
+  <p class="description" *ngIf="task.description">{{task.description}}</p>
 </div>
 
 <button

@@ -1,8 +1,8 @@
-import { ComponentFixture, TestBed, fakeAsync, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
-import { TaskComponent } from './task.component';
-import { mockTasks } from 'src/app/shared/services/mock/mock-tasks.mock';
 import { ReactiveFormsModule } from '@angular/forms';
+import { mockTasks } from 'src/app/shared/services/mock/mock-tasks.mock';
+import { TaskComponent } from './task.component';
 
 describe('TaskComponent', () => {
   let component: TaskComponent;

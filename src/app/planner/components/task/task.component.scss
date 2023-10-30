@@ -7,3 +7,12 @@
   padding: 1rem;
   border-radius: 0.5rem;
 }
+.task-content{
+  overflow: hidden;
+}
+.form-check-label{
+  text-overflow: ellipsis;
+}
+.description{
+  text-overflow: ellipsis;
+}
