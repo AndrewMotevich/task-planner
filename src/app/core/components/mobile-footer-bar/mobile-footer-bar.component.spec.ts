@@ -1,7 +1,6 @@
-import { ComponentFixture, TestBed, inject } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MobileFooterBarComponent } from './mobile-footer-bar.component';
-import { FilterService } from 'src/app/shared/services/filter.service';
 
 describe('MobileFooterBarComponent', () => {
   let component: MobileFooterBarComponent;
@@ -9,9 +8,8 @@ describe('MobileFooterBarComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MobileFooterBarComponent ]
-    })
-    .compileComponents();
+      declarations: [MobileFooterBarComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(MobileFooterBarComponent);
     component = fixture.componentInstance;
@@ -24,13 +22,13 @@ describe('MobileFooterBarComponent', () => {
 
   it('should set overdue task filter', () => {
     const buttons = fixture.nativeElement.querySelectorAll('button');
-    buttons[0].click()
+    buttons[0].click();
     expect(component.isOverdueTasks).toBe(true);
   });
 
   it('should set completed task filter', () => {
     const buttons = fixture.nativeElement.querySelectorAll('button');
-    buttons[1].click()
+    buttons[1].click();
     expect(component.isCompletedTasks).toBe(true);
   });
 });

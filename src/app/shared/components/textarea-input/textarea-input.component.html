@@ -1,17 +1,18 @@
 <div class="flex-layout needs-validation">
-  <label htmlFor="inputTextarea">{{label}}</label>
+  <label htmlFor="inputTextarea">{{ label }}</label>
   <textarea
     id="inputTextarea"
     type="text"
     class="form-control"
     [rows]="rows"
     [cols]="cols"
-    [ngClass]="{'was-validated is-invalid' : (control.dirty && control.invalid)}"
+    [ngClass]="{ 'was-validated is-invalid': control.dirty && control.invalid }"
     [placeholder]="placeholder || ''"
-    [formControl]="control"></textarea>
+    [formControl]="control"
+  ></textarea>
   <ng-template [ngIf]="control.errors && control.dirty">
     <small class="error">
-      {{control.errors | getErrorMessage: label : maxlength : minlength}}
+      {{ control.errors | getErrorMessage: label : maxlength : minlength }}
     </small>
   </ng-template>
 </div>

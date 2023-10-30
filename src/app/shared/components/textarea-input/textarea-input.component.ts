@@ -1,15 +1,8 @@
-import {
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
-  Component,
-  Input,
-  Optional,
-  Self,
-} from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, Optional, Self } from '@angular/core';
 import { NgControl, ReactiveFormsModule } from '@angular/forms';
-import { GetErrorMessagePipe } from '../../pipes/get-error-message.pipe';
+import { GetErrorMessagePipe } from 'src/app/shared/pipes/get-error-message.pipe';
 import { CommonModule } from '@angular/common';
-import { BaseInputClass } from '../../classes/base-input.class';
+import { BaseInputClass } from 'src/app/shared/classes/base-input.class';
 
 @Component({
   selector: 'app-textarea-input',
@@ -26,10 +19,7 @@ export class TextareaInputComponent extends BaseInputClass {
   @Input() public rows = 5;
   @Input() public cols = 5;
 
-  constructor(
-    @Self() @Optional() ngControl: NgControl,
-    cdRef: ChangeDetectorRef
-  ) {
+  constructor(@Self() @Optional() ngControl: NgControl, cdRef: ChangeDetectorRef) {
     super(ngControl, cdRef);
     this.ngControl.valueAccessor = this;
   }

@@ -1,27 +1,16 @@
 import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import {
-  FormControl,
-  ReactiveFormsModule,
-  Validators,
-} from '@angular/forms';
+import { FormControl, ReactiveFormsModule, Validators } from '@angular/forms';
 import { PasswordInputComponent } from './password-input.component';
 
 @Component({
   selector: 'app-mock-parent',
   template: `
-    <app-password-input
-      [placeholder]="placeholder"
-      [label]="label"
-      [formControl]="textInput"
-    ></app-password-input>
+    <app-password-input [placeholder]="placeholder" [label]="label" [formControl]="textInput"></app-password-input>
   `,
 })
 class MockParentComponent {
-  textInput = new FormControl('', [
-    Validators.minLength(8),
-    Validators.maxLength(10),
-  ]);
+  textInput = new FormControl('', [Validators.minLength(8), Validators.maxLength(10)]);
   placeholder = 'Enter text';
   label = 'Text Input Label';
 

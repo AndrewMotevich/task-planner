@@ -1,24 +1,15 @@
 <div class="form-check">
-  <input
-    class="form-check-input"
-    type="checkbox"
-    [formControl]="checked"
-    id="flexCheckDefault">
+  <input class="form-check-input" type="checkbox" [formControl]="checked" id="flexCheckDefault" />
 </div>
 
 <div class="task-content">
-  <label
-    class="form-check-label"
-    for="flexCheckDefault">
-    {{task.title}}
+  <label class="form-check-label" for="flexCheckDefault">
+    {{ task.title }}
   </label>
-  <p *ngIf="task.date"><span class="error">Дэдлайн:</span> {{taskDate | date: "dd.MM.YY"}}</p>
-  <p class="description" *ngIf="task.description">{{task.description}}</p>
+  <p *ngIf="task.date"><span class="error">Дэдлайн:</span> {{ taskDate | date: 'dd.MM.YY' }}</p>
+  <p class="description" *ngIf="task.description">{{ task.description }}</p>
 </div>
 
-<button
-  type="button"
-  class="btn btn-danger"
-  (click)="deleteTask()">
+<button type="button" class="btn btn-danger" (click)="deleteTask()">
   <i class="bi bi-trash"></i>
 </button>

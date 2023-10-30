@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import {
   AbstractControl,
   FormBuilder,
@@ -10,7 +10,7 @@ import {
 } from '@angular/forms';
 import { NgbActiveModal, NgbDateParserFormatter } from '@ng-bootstrap/ng-bootstrap';
 import { markAllAsDirty } from 'src/app/shared/helpers/mark-as-dirty.util';
-import { TaskService } from '../../../shared/services/task.service';
+import { TaskService } from 'src/app/shared/services/task.service';
 
 @Component({
   selector: 'app-task-form',
@@ -18,13 +18,13 @@ import { TaskService } from '../../../shared/services/task.service';
   styleUrls: ['./task-form.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TaskFormComponent {
+export class TaskFormComponent implements OnInit {
   public taskForm: FormGroup;
   constructor(
     public activeModal: NgbActiveModal,
     private formBuilder: FormBuilder,
     private dateParser: NgbDateParserFormatter,
-    private taskService: TaskService
+    private taskService: TaskService,
   ) {}
 
   public ngOnInit() {
@@ -40,9 +40,7 @@ export class TaskFormComponent {
       markAllAsDirty(this.taskForm.controls);
       return;
     }
-    const parsedDate = new Date(
-      this.dateParser.format(this.taskForm.controls['date'].getRawValue())
-    );
+    const parsedDate = new Date(this.dateParser.format(this.taskForm.controls['date'].getRawValue()));
 
     this.taskService.addTask({
       ...this.taskForm.getRawValue(),

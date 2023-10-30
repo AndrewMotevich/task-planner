@@ -8,9 +8,8 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ HeaderComponent ]
-    })
-    .compileComponents();
+      declarations: [HeaderComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
@@ -22,6 +21,6 @@ describe('HeaderComponent', () => {
   });
 
   it('should have title', () => {
-    expect(fixture.nativeElement.innerText).toContain("Список задач");
+    expect(fixture.nativeElement.innerText).toContain('Список задач');
   });
 });

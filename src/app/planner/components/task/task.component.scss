@@ -3,16 +3,16 @@
   grid-template-columns: 1rem auto 3rem;
   align-items: center;
   gap: 1rem;
-  background-color:  #0709178d;
+  background-color: #0709178d;
   padding: 1rem;
   border-radius: 0.5rem;
 }
-.task-content{
+.task-content {
   overflow: hidden;
 }
-.form-check-label{
+.form-check-label {
   text-overflow: ellipsis;
 }
-.description{
+.description {
   text-overflow: ellipsis;
 }

@@ -1,17 +1,17 @@
-<div
-  class="btn-group button-wrapper"
-  role="group">
+<div class="btn-group button-wrapper" role="group">
   <button
     type="button"
     [class]="'btn btn-block ' + (isOverdueTasks ? 'btn-primary' : 'btn-secondary')"
-    (click)="toggleOverdueTasks()">
+    (click)="toggleOverdueTasks()"
+  >
     <i class="bi bi-x-circle"></i>
     <span>Просроченные</span>
   </button>
   <button
     type="button"
     [class]="'btn btn-block ' + (isCompletedTasks ? 'btn-primary' : 'btn-secondary')"
-    (click)="toggleCompletedTasks()">
+    (click)="toggleCompletedTasks()"
+  >
     <i class="bi bi-check-square"></i>
     <span>Выполненные</span>
   </button>

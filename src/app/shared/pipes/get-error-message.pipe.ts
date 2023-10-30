@@ -6,13 +6,7 @@ import { ValidationErrors } from '@angular/forms';
   standalone: true,
 })
 export class GetErrorMessagePipe implements PipeTransform {
-  transform(
-    errors: ValidationErrors,
-    label?: string,
-    maxlength?: number,
-    minlength?: number
-  ): string {
-
+  transform(errors: ValidationErrors, label?: string, maxlength?: number, minlength?: number): string {
     const errorMessages: { [key: string]: string } = {
       required: `Поле ${label || ''} обязательно!`,
       email: 'Не верно указана почта!',

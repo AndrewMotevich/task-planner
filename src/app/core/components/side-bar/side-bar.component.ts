@@ -1,12 +1,6 @@
-import {
-  animate,
-  state,
-  style,
-  transition,
-  trigger,
-} from '@angular/animations';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { FilterService } from '../../../shared/services/filter.service';
+import { FilterService } from 'src/app/shared/services/filter.service';
 import { FilterOptions } from 'src/app/shared/enums/filter-options.enum';
 
 @Component({
@@ -20,13 +14,13 @@ import { FilterOptions } from 'src/app/shared/enums/filter-options.enum';
         'open',
         style({
           width: '15rem',
-        })
+        }),
       ),
       state(
         'closed',
         style({
           width: '5rem',
-        })
+        }),
       ),
       transition('open <=> closed', [animate('1s')]),
     ]),

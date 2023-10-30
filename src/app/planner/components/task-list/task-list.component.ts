@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { TaskService } from '../../../shared/services/task.service';
+import { TaskService } from 'src/app/shared/services/task.service';
 import { Observable, of, switchMap } from 'rxjs';
-import { ITask } from '../../../shared/interfaces/task.interface';
+import { ITask } from 'src/app/shared/interfaces/task.interface';
 import { FilterService } from 'src/app/shared/services/filter.service';
 import { FilterOptions } from 'src/app/shared/enums/filter-options.enum';
 
@@ -20,7 +20,7 @@ export class TaskListComponent implements OnInit {
 
   constructor(
     private taskService: TaskService,
-    private filterService: FilterService
+    private filterService: FilterService,
   ) {}
 
   public ngOnInit(): void {
@@ -28,15 +28,11 @@ export class TaskListComponent implements OnInit {
 
     this.overdueTasks$ = this.filter$.pipe(
       switchMap((filter) => {
-        if (
-          filter === FilterOptions.default ||
-          filter === FilterOptions.overdue ||
-          filter === FilterOptions.both
-        ) {
+        if (filter === FilterOptions.default || filter === FilterOptions.overdue || filter === FilterOptions.both) {
           return this.taskService.overdueTasks$;
         }
         return of([]);
-      })
+      }),
     );
 
     this.uncompletedTasks$ = this.filter$.pipe(
@@ -45,20 +41,16 @@ export class TaskListComponent implements OnInit {
           return this.taskService.uncompletedTasks$;
         }
         return of([]);
-      })
+      }),
     );
 
     this.completedTasks$ = this.filter$.pipe(
       switchMap((filter) => {
-        if (
-          filter === FilterOptions.default ||
-          filter === FilterOptions.completed ||
-          filter === FilterOptions.both
-        ) {
+        if (filter === FilterOptions.default || filter === FilterOptions.completed || filter === FilterOptions.both) {
           return this.taskService.completedTasks$;
         }
         return of([]);
-      })
+      }),
     );
   }
 }

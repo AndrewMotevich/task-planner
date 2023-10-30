@@ -7,17 +7,8 @@ import { HeaderComponent } from './components/header/header.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { MobileFooterBarComponent } from './components/mobile-footer-bar/mobile-footer-bar.component';
 
-
 @NgModule({
-  declarations: [
-    CorePageComponent,
-    HeaderComponent,
-    SideBarComponent,
-    MobileFooterBarComponent
-  ],
-  imports: [
-    CommonModule,
-    CoreRoutingModule
-  ]
+  declarations: [CorePageComponent, HeaderComponent, SideBarComponent, MobileFooterBarComponent],
+  imports: [CommonModule, CoreRoutingModule],
 })
-export class CoreModule { }
+export class CoreModule {}

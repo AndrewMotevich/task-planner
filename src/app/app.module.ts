@@ -10,12 +10,7 @@ import { NotFoundPageComponent } from './shared/pages/not-found-page/not-found-p
 
 @NgModule({
   declarations: [AppComponent, NotFoundPageComponent, AboutComponent],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    AppRoutingModule,
-    NgbModule,
-  ],
+  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, NgbModule],
   providers: [],
   bootstrap: [AppComponent],
 })

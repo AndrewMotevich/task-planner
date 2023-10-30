@@ -1,19 +1,12 @@
-import {
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
-  Component,
-  Input,
-  Optional,
-  Self,
-} from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, Optional, Self } from '@angular/core';
 import { NgControl, ReactiveFormsModule } from '@angular/forms';
-import { BaseInputClass } from '../../classes/base-input.class';
+import { BaseInputClass } from 'src/app/shared/classes/base-input.class';
 import { CommonModule } from '@angular/common';
-import { GetErrorMessagePipe } from '../../pipes/get-error-message.pipe';
+import { GetErrorMessagePipe } from 'src/app/shared/pipes/get-error-message.pipe';
 
 enum TextInputType {
-  password = "password",
-  text = "text",
+  password = 'password',
+  text = 'text',
 }
 
 @Component({
@@ -31,19 +24,16 @@ export class PasswordInputComponent extends BaseInputClass {
 
   public type = TextInputType.password;
 
-  constructor(
-    @Self() @Optional() ngControl: NgControl,
-    cdRef: ChangeDetectorRef
-  ) {
+  constructor(@Self() @Optional() ngControl: NgControl, cdRef: ChangeDetectorRef) {
     super(ngControl, cdRef);
     this.ngControl.valueAccessor = this;
   }
 
   public changeVisibility(): void {
-    if(this.type === TextInputType.password){
-      this.type = TextInputType.text
+    if (this.type === TextInputType.password) {
+      this.type = TextInputType.text;
       return;
     }
-    this.type = TextInputType.password
+    this.type = TextInputType.password;
   }
 }

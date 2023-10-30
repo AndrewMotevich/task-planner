@@ -1,12 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NotFoundPageComponent } from './shared/pages/not-found-page/not-found-page.component';
-import {
-  ABOUT,
-  BASE,
-  HOME,
-  LOGIN,
-} from './shared/constants/routing-paths.consts';
+import { ABOUT, BASE, HOME, LOGIN } from './shared/constants/routing-paths.consts';
 import { AboutComponent } from './shared/pages/about/about.component';
 
 export const routes: Routes = [

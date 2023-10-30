@@ -1,14 +1,8 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  Input,
-  OnDestroy,
-  OnInit,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Subject, takeUntil } from 'rxjs';
-import { ITask } from '../../../shared/interfaces/task.interface';
-import { TaskService } from '../../../shared/services/task.service';
+import { ITask } from 'src/app/shared/interfaces/task.interface';
+import { TaskService } from 'src/app/shared/services/task.service';
 
 @Component({
   selector: 'app-task',
@@ -28,11 +22,9 @@ export class TaskComponent implements OnInit, OnDestroy {
   public ngOnInit(): void {
     this.taskDate = this.task.date ? new Date(this.task.date) : '';
     this.checked.setValue(this.task.checked);
-    this.checked.valueChanges
-      .pipe(takeUntil(this.unsubscribe$))
-      .subscribe((value) => {
-        this.taskService.editTask({ ...this.task, checked: value });
-      });
+    this.checked.valueChanges.pipe(takeUntil(this.unsubscribe$)).subscribe((value) => {
+      this.taskService.editTask({ ...this.task, checked: value });
+    });
   }
 
   public ngOnDestroy(): void {

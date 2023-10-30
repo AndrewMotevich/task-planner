@@ -1,10 +1,5 @@
 import { ChangeDetectorRef, Directive, DoCheck, OnInit } from '@angular/core';
-import {
-  ControlValueAccessor,
-  FormControl,
-  NgControl,
-  ValidationErrors,
-} from '@angular/forms';
+import { ControlValueAccessor, FormControl, NgControl, ValidationErrors } from '@angular/forms';
 
 @Directive()
 export class BaseInputClass implements OnInit, DoCheck, ControlValueAccessor {
@@ -15,7 +10,7 @@ export class BaseInputClass implements OnInit, DoCheck, ControlValueAccessor {
 
   constructor(
     protected ngControl: NgControl,
-    protected cdRef: ChangeDetectorRef
+    protected cdRef: ChangeDetectorRef,
   ) {}
 
   ngOnInit(): void {

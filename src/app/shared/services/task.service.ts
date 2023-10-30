@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, map } from 'rxjs';
-import { sortByCompleted } from '../helpers/sort-by-completed.helper';
-import { sortByOverdue } from '../helpers/sort-by-overdue.helper';
-import { sortByUncompleted } from '../helpers/sort-by-uncompleted.helper';
-import { ITask } from '../interfaces/task.interface';
+import { sortByCompleted } from 'src/app/shared/helpers/sort-by-completed.helper';
+import { sortByOverdue } from 'src/app/shared/helpers/sort-by-overdue.helper';
+import { sortByUncompleted } from 'src/app/shared/helpers/sort-by-uncompleted.helper';
+import { ITask } from 'src/app/shared/interfaces/task.interface';
 import { mockTasks } from './mock/mock-tasks.mock';
 
 @Injectable({
@@ -18,21 +18,15 @@ export class TaskService {
   }
 
   public get overdueTasks$(): Observable<ITask[]> {
-    return this.tasksObservableSubject
-      .asObservable()
-      .pipe(map((tasks) => sortByOverdue(tasks)));
+    return this.tasksObservableSubject.asObservable().pipe(map((tasks) => sortByOverdue(tasks)));
   }
 
   public get uncompletedTasks$(): Observable<ITask[]> {
-    return this.tasksObservableSubject
-      .asObservable()
-      .pipe(map((tasks) => sortByUncompleted(tasks)));
+    return this.tasksObservableSubject.asObservable().pipe(map((tasks) => sortByUncompleted(tasks)));
   }
 
   public get completedTasks$(): Observable<ITask[]> {
-    return this.tasksObservableSubject
-      .asObservable()
-      .pipe(map((tasks) => sortByCompleted(tasks)));
+    return this.tasksObservableSubject.asObservable().pipe(map((tasks) => sortByCompleted(tasks)));
   }
 
   constructor() {
@@ -54,9 +48,7 @@ export class TaskService {
   }
 
   public editTask(updatedTask: ITask): void {
-    const taskIndex = this.tasks.findIndex(
-      (item) => updatedTask.id === item.id
-    );
+    const taskIndex = this.tasks.findIndex((item) => updatedTask.id === item.id);
     if (taskIndex === -1) return;
 
     this.tasks[taskIndex] = { ...updatedTask };

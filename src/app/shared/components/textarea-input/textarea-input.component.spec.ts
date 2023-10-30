@@ -6,11 +6,7 @@ import { TextareaInputComponent } from './textarea-input.component';
 @Component({
   selector: 'app-mock-parent',
   template: `
-    <app-textarea-input
-      [placeholder]="placeholder"
-      [label]="label"
-      [(ngModel)]="modelValue"
-    ></app-textarea-input>
+    <app-textarea-input [placeholder]="placeholder" [label]="label" [(ngModel)]="modelValue"></app-textarea-input>
   `,
 })
 class MockParentComponent {
@@ -37,7 +33,6 @@ describe('TextareaComponent', () => {
   it('should create the parent component', () => {
     expect(parentComponent).toBeTruthy();
   });
-
 
   it('should update value on user input', () => {
     const inputElement = fixture.nativeElement.querySelector('textarea');

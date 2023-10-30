@@ -1,4 +1,4 @@
-import { ITask } from '../../interfaces/task.interface';
+import { ITask } from 'src/app/shared/interfaces/task.interface';
 
 export const mockTasks: ITask[] = [
   {

@@ -6,30 +6,30 @@
   box-sizing: border-box;
   display: flex;
 }
-.application-wrapper{
+.application-wrapper {
   width: 100%;
   height: 100%;
 }
 
-.mobile-footer-bar{
+.mobile-footer-bar {
   display: none;
 }
 
-.main-wrapper{
+.main-wrapper {
   width: 100%;
   height: calc(100% - 5rem);
   overflow: auto;
   padding: 0 1rem 1rem 1rem;
 }
 
-@media (max-width: map-get($breakpoints, "small")) {
-  .main-wrapper{
+@media (max-width: map-get($breakpoints, 'small')) {
+  .main-wrapper {
     height: calc(100% - 10rem);
   }
-  .mobile-footer-bar{
+  .mobile-footer-bar {
     display: block;
   }
-  .side-bar{
+  .side-bar {
     display: none;
   }
 }

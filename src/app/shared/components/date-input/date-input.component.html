@@ -1,5 +1,5 @@
 <div class="flex-layout needs-validation">
-  <label htmlFor="inputDate">{{label}}</label>
+  <label htmlFor="inputDate">{{ label }}</label>
   <div class="input-group">
     <input
       id="inputDate"
@@ -13,6 +13,6 @@
     <button class="btn btn-outline-secondary bi bi-calendar3" (click)="d.toggle()" type="button"></button>
   </div>
   <ng-template [ngIf]="control.errors && control.dirty">
-    <small class="error">{{control.errors | getErrorMessage: label : maxlength : minlength}}</small>
+    <small class="error">{{ control.errors | getErrorMessage: label : maxlength : minlength }}</small>
   </ng-template>
 </div>

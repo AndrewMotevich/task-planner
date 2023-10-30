@@ -1,26 +1,25 @@
 <aside [@openClose]="isSidebarOpen ? 'open' : 'closed'">
   <div class="aside-header">
-    <button
-      type="button"
-      class="btn btn-secondary"
-      (click)="toggleSidebar()">
-      <i [ngClass]="{'bi bi-arrow-bar-left' : isSidebarOpen, 'bi bi-arrow-bar-right' : !isSidebarOpen}"></i>
+    <button type="button" class="btn btn-secondary" (click)="toggleSidebar()">
+      <i [ngClass]="{ 'bi bi-arrow-bar-left': isSidebarOpen, 'bi bi-arrow-bar-right': !isSidebarOpen }"></i>
     </button>
   </div>
-  <hr>
+  <hr />
 
   <div class="aside-content">
     <button
       type="button"
       [class]="'btn ' + (isOverdueTasks ? 'btn-primary' : 'btn-secondary')"
-      (click)="toggleOverdueTasks()">
+      (click)="toggleOverdueTasks()"
+    >
       <i class="bi bi-x-circle"></i>
       <span>Просроченные</span>
     </button>
     <button
       type="button"
       [class]="'btn ' + (isCompletedTasks ? 'btn-primary' : 'btn-secondary')"
-      (click)="toggleCompletedTasks()">
+      (click)="toggleCompletedTasks()"
+    >
       <i class="bi bi-check-square"></i>
       <span>Выполненные</span>
     </button>

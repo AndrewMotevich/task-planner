@@ -1,9 +1,9 @@
-import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SideBarComponent } from './side-bar.component';
-import { CoreModule } from '../../core.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FilterService } from 'src/app/shared/services/filter.service';
+import { CoreModule } from 'src/app/core/core.module';
+import { SideBarComponent } from './side-bar.component';
 
 describe('SideBarComponent', () => {
   let component: SideBarComponent;
@@ -13,9 +13,8 @@ describe('SideBarComponent', () => {
     await TestBed.configureTestingModule({
       imports: [BrowserAnimationsModule],
       ...new CoreModule(),
-      providers: [FilterService]
-    })
-    .compileComponents();
+      providers: [FilterService],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(SideBarComponent);
     component = fixture.componentInstance;

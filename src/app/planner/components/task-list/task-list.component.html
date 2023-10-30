@@ -1,20 +1,20 @@
 <ng-container *ngIf="(overdueTasks$ | async).length">
   <h3>Просроченные:</h3>
-  <ng-container *ngFor="let task of (overdueTasks$ | async)">
+  <ng-container *ngFor="let task of overdueTasks$ | async">
     <app-task [task]="task"></app-task>
   </ng-container>
 </ng-container>
 
 <ng-container *ngIf="(uncompletedTasks$ | async).length">
   <h3>Не выполненные:</h3>
-  <ng-container *ngFor="let task of (uncompletedTasks$ | async)">
+  <ng-container *ngFor="let task of uncompletedTasks$ | async">
     <app-task [task]="task"></app-task>
   </ng-container>
 </ng-container>
 
 <ng-container *ngIf="(completedTasks$ | async).length">
   <h3>Выполненные:</h3>
-  <ng-container *ngFor="let task of (completedTasks$ | async)">
+  <ng-container *ngFor="let task of completedTasks$ | async">
     <app-task [task]="task"></app-task>
   </ng-container>
 </ng-container>

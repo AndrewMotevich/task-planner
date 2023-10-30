@@ -1,4 +1,4 @@
-import { IRoutingPath } from "../interfaces/routing-path.interface";
+import { IRoutingPath } from 'src/app/shared/interfaces/routing-path.interface';
 
 export const LOGIN: IRoutingPath = {
   path: 'login',
