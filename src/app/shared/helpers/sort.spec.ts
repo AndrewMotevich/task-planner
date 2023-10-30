@@ -1,4 +1,4 @@
-import { mockTasks} from '../../shared/services/mock/mock-tasks.mock';
+import { mockTasks} from '../services/mock/mock-tasks.mock';
 import { sortByCompleted } from './sort-by-completed.helper';
 import { sortByOverdue } from './sort-by-overdue.helper';
 import { sortByUncompleted } from './sort-by-uncompleted.helper';

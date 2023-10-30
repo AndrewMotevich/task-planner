@@ -1,4 +1,4 @@
-import { ITask } from '../../../planner/interfaces/task.interface';
+import { ITask } from '../../interfaces/task.interface';
 
 export const mockTasks: ITask[] = [
   {
