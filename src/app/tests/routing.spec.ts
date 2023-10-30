@@ -2,10 +2,10 @@ import { Location } from '@angular/common';
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 import { Router } from '@angular/router';
 import { RouterTestingModule } from '@angular/router/testing';
-import { AppComponent } from 'src/app/app.component';
-import { ABOUT } from 'src/app/shared/constants/routing-paths.consts';
-import { AboutComponent } from 'src/app/shared/pages/about/about.component';
-import { NotFoundPageComponent } from 'src/app/shared/pages/not-found-page/not-found-page.component';
+import { AppComponent } from '@app/app.component';
+import { ABOUT } from '@shared/constants/routing-paths.consts';
+import { AboutComponent } from '@shared/pages/about/about.component';
+import { NotFoundPageComponent } from '@shared/pages/not-found-page/not-found-page.component';
 
 describe('Routing', () => {
   let component: AppComponent;

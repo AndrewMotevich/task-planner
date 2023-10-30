@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FilterService } from 'src/app/shared/services/filter.service';
-import { CoreModule } from 'src/app/core/core.module';
+import { FilterService } from '@shared/services/filter.service';
+import { CoreModule } from '@app/core/core.module';
 import { SideBarComponent } from './side-bar.component';
 
 describe('SideBarComponent', () => {

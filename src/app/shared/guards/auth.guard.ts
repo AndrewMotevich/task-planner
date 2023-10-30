@@ -1,8 +1,8 @@
 import { inject } from '@angular/core';
 import { CanMatchFn, Router } from '@angular/router';
 import { map, take, tap } from 'rxjs';
-import { AuthService } from 'src/app/shared/services/auth.service';
-import { LOGIN } from 'src/app/shared/constants/routing-paths.consts';
+import { AuthService } from '@shared/services/auth.service';
+import { LOGIN } from '@shared/constants/routing-paths.consts';
 
 export const authGuard: CanMatchFn = () => {
   const coreFacade = inject(AuthService);

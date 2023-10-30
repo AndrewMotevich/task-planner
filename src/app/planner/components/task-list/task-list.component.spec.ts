@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TaskListComponent } from './task-list.component';
-import { PlannerModule } from 'src/app/planner/planner.module';
+import { PlannerModule } from '../../planner.module';
 
 describe('TaskListComponent', () => {
   let component: TaskListComponent;

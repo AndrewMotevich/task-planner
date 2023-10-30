@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { TaskService } from 'src/app/shared/services/task.service';
+import { TaskService } from '@shared/services/task.service';
 import { Observable, of, switchMap } from 'rxjs';
-import { ITask } from 'src/app/shared/interfaces/task.interface';
-import { FilterService } from 'src/app/shared/services/filter.service';
-import { FilterOptions } from 'src/app/shared/enums/filter-options.enum';
+import { ITask } from '@shared/interfaces/task.interface';
+import { FilterService } from '@shared/services/filter.service';
+import { FilterOptions } from '@shared/enums/filter-options.enum';
 
 @Component({
   selector: 'app-task-list',

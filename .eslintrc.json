@@ -40,8 +40,8 @@
     "import/resolver": {
       "alias": {
         "map": [
-          ["@app", "src/app/*"],
-          ["@shared", "src/app/shared/*"]
+          ["@app", "src/app"],
+          ["@shared", "src/app/shared"]
         ],
         "extensions": [".ts", ".tsx"]
       }

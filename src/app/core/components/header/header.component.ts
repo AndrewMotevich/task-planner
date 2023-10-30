@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { TaskFormComponent } from 'src/app/planner/components/task-form/task-form.component';
+import { TaskFormComponent } from '@app/planner/components/task-form/task-form.component';
 
 @Component({
   selector: 'app-header',

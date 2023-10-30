@@ -1,4 +1,4 @@
-import { ITask } from 'src/app/shared/interfaces/task.interface';
+import { ITask } from '@shared/interfaces/task.interface';
 
 export function sortByOverdue(tasks: ITask[]): ITask[] {
   return tasks.filter((task) => {

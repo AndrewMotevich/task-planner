@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { LoginPageComponent } from './login-page.component';
-import { AuthModule } from 'src/app/auth/auth.module';
+import { AuthModule } from '@app/auth/auth.module';
 
 describe('LoginPageComponent', () => {
   let component: LoginPageComponent;

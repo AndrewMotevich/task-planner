@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input, Optional, Self } from '@angular/core';
 import { NgControl, ReactiveFormsModule } from '@angular/forms';
-import { GetErrorMessagePipe } from 'src/app/shared/pipes/get-error-message.pipe';
+import { GetErrorMessagePipe } from '@shared/pipes/get-error-message.pipe';
 import { CommonModule } from '@angular/common';
-import { BaseInputClass } from 'src/app/shared/classes/base-input.class';
+import { BaseInputClass } from '@shared/classes/base-input.class';
 
 @Component({
   selector: 'app-textarea-input',

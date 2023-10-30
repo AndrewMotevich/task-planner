@@ -1,9 +1,9 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { HOME } from 'src/app/shared/constants/routing-paths.consts';
-import { markAllAsDirty } from 'src/app/shared/helpers/mark-as-dirty.util';
-import { AuthService } from 'src/app/shared/services/auth.service';
+import { HOME } from '@shared/constants/routing-paths.consts';
+import { markAllAsDirty } from '@shared/helpers/mark-as-dirty.util';
+import { AuthService } from '@shared/services/auth.service';
 
 @Component({
   selector: 'app-login-page',

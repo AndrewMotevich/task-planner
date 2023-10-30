@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { ReactiveFormsModule } from '@angular/forms';
-import { mockTasks } from 'src/app/shared/services/mock/mock-tasks.mock';
+import { mockTasks } from '@shared/services/mock/mock-tasks.mock';
 import { TaskComponent } from './task.component';
 
 describe('TaskComponent', () => {

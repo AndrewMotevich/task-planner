@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BASE, HOME } from 'src/app/shared/constants/routing-paths.consts';
+import { BASE, HOME } from '@shared/constants/routing-paths.consts';
 import { CorePageComponent } from './pages/core-page/core-page.component';
-import { authGuard } from 'src/app/shared/guards/auth.guard';
+import { authGuard } from '@shared/guards/auth.guard';
 
 const routes: Routes = [
   {

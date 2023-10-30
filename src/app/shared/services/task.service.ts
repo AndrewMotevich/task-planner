@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, map } from 'rxjs';
-import { sortByCompleted } from 'src/app/shared/helpers/sort-by-completed.helper';
-import { sortByOverdue } from 'src/app/shared/helpers/sort-by-overdue.helper';
-import { sortByUncompleted } from 'src/app/shared/helpers/sort-by-uncompleted.helper';
-import { ITask } from 'src/app/shared/interfaces/task.interface';
+import { sortByCompleted } from '@shared/helpers/sort-by-completed.helper';
+import { sortByOverdue } from '@shared/helpers/sort-by-overdue.helper';
+import { sortByUncompleted } from '@shared/helpers/sort-by-uncompleted.helper';
+import { ITask } from '@shared/interfaces/task.interface';
 import { mockTasks } from './mock/mock-tasks.mock';
 
 @Injectable({

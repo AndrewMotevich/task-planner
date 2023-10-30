@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Subject, takeUntil } from 'rxjs';
-import { ITask } from 'src/app/shared/interfaces/task.interface';
-import { TaskService } from 'src/app/shared/services/task.service';
+import { ITask } from '@shared/interfaces/task.interface';
+import { TaskService } from '@shared/services/task.service';
 
 @Component({
   selector: 'app-task',
