@@ -1,5 +1,18 @@
 Frontend Angular Developer Test
-Задание
+### Запуск приложения
+1. Docker compose
+   ```
+   docker-compose up
+   ```
+3. Angular serve
+   ```
+   npm install
+   npm run start
+   ```
+
+### [DEPLOYMENT](https://andrewmotevich.github.io/task-planner/)
+
+### Задание
 Разработать SPA приложение, в котором реализовать список задач на ближайшее время.
 Используемые средства: Angular 16, bootstrap 5
 Сроки выполнения: до 5 дней
